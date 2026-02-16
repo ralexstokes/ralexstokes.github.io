@@ -1,0 +1,13 @@
+title: Ralex Stokes
+description: Notes and posts
+theme: minima
+plugins:
+  - jekyll-feed
+exclude:
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - flake.nix
+  - flake.lock
+  - README.md
+  - vendor
