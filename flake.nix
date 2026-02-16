@@ -19,7 +19,7 @@
       devShells = forEachSystem (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            ruby_4_0
+            ruby
             bundler
           ];
           shellHook = ''
