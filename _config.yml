@@ -11,3 +11,4 @@ exclude:
   - flake.lock
   - README.md
   - vendor
+  - AGENTS.md
