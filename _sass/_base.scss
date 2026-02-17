@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $font-serif;
+  line-height: $base-line-height;
+  color: $color-text;
+  background-color: $color-bg;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin-top: $spacing * 1.5;
+  margin-bottom: $spacing * 0.5;
+  font-weight: 600;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 1rem; }
+
+// Links
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($color-accent, 15%);
+  }
+}
+
+// Paragraphs
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacing * 0.75;
+}
+
+// Blockquotes
+
+blockquote {
+  margin: $spacing 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid $color-border;
+  color: $color-text-muted;
+  font-style: italic;
+}
+
+// Horizontal rules
+
+hr {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: $spacing * 1.5 0;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: $spacing auto;
+}
+
+// Code
+
+code {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  background-color: $color-code-bg;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: $font-mono;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  background-color: $color-code-bg;
+  padding: 1.25rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: $spacing 0;
+
+  code {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-size: inherit;
+  }
+}
+
+// Lists
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: $spacing * 0.75;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+// Tables
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: $spacing 0;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid $color-border;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+}
