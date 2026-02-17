@@ -1,5 +1,7 @@
 title: anaphors
 description: some thoughts
+url: https://ralexstokes.github.io
+repository: ralexstokes/ralexstokes.github.io
 theme: minima
 plugins:
   - jekyll-feed
