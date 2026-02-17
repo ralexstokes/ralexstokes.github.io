@@ -1,17 +1,20 @@
 // Typography
+$font-display: "Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, serif;
 $font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
 $font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
 // Colors
-$color-bg: #fafaf7;
-$color-text: #2c2c2c;
-$color-text-muted: #999;
-$color-accent: #8b7355;
-$color-border: #e0ddd8;
-$color-code-bg: #f4f2ee;
+$color-bg: #f7f5f0;
+$color-text: #2a2a28;
+$color-text-muted: #8a867e;
+$color-accent: #8b6d47;
+$color-accent-light: #b8a68e;
+$color-border: #ddd9d0;
+$color-code-bg: #efece5;
+$color-selection: #e8dfd2;
 
 // Layout
 $content-width: 640px;
 $base-font-size: 19px;
-$base-line-height: 1.72;
+$base-line-height: 1.75;
 $spacing: 2rem;

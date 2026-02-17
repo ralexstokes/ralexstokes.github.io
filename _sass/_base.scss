@@ -6,6 +6,7 @@
 
 html {
   font-size: $base-font-size;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,29 +20,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: $color-selection;
+  color: $color-text;
+}
+
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.25;
+  font-family: $font-display;
+  line-height: 1.2;
   margin-top: $spacing * 1.5;
   margin-bottom: $spacing * 0.5;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.4rem; }
-h3 { font-size: 1.15rem; }
-h4 { font-size: 1rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
 
 // Links
 
 a {
   color: $color-accent;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 
   &:hover {
-    color: darken($color-accent, 15%);
+    color: darken($color-accent, 12%);
   }
 }
 
@@ -50,24 +58,36 @@ a {
 p {
   margin-top: 0;
   margin-bottom: $spacing * 0.75;
+  hanging-punctuation: first last;
 }
 
 // Blockquotes
 
 blockquote {
-  margin: $spacing 0;
-  padding-left: 1.25rem;
-  border-left: 2px solid $color-border;
+  margin: $spacing * 1.25 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid $color-accent-light;
   color: $color-text-muted;
   font-style: italic;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-// Horizontal rules
+// Horizontal rules — typographic section break
 
 hr {
   border: none;
-  border-top: 1px solid $color-border;
-  margin: $spacing * 1.5 0;
+  text-align: center;
+  margin: $spacing * 2 0;
+
+  &::before {
+    content: "* \2002 * \2002 *";
+    color: $color-accent-light;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+  }
 }
 
 // Images
@@ -76,28 +96,29 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: $spacing auto;
+  margin: $spacing * 1.25 auto;
+  border-radius: 2px;
 }
 
 // Code
 
 code {
   font-family: $font-mono;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   background-color: $color-code-bg;
-  padding: 0.15em 0.35em;
+  padding: 0.15em 0.4em;
   border-radius: 3px;
 }
 
 pre {
   font-family: $font-mono;
-  font-size: 0.82rem;
-  line-height: 1.55;
+  font-size: 0.8rem;
+  line-height: 1.6;
   background-color: $color-code-bg;
-  padding: 1.25rem;
+  padding: 1.25rem 1.5rem;
   border-radius: 4px;
   overflow-x: auto;
-  margin: $spacing 0;
+  margin: $spacing * 1.25 0;
 
   code {
     padding: 0;
@@ -115,7 +136,7 @@ ul, ol {
 }
 
 li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
 }
 
 // Tables
@@ -123,16 +144,21 @@ li {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: $spacing 0;
+  margin: $spacing * 1.25 0;
   font-size: 0.9rem;
 }
 
 th, td {
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   border-bottom: 1px solid $color-border;
   text-align: left;
 }
 
 th {
-  font-weight: 600;
+  font-family: $font-display;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $color-text-muted;
 }
