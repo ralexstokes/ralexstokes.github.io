@@ -14,3 +14,4 @@ exclude:
   - README.md
   - vendor
   - AGENTS.md
+  - CLAUDE.md
