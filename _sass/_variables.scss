@@ -1,20 +1,57 @@
+// anaphors — design tokens
+// Colors live as CSS custom properties so the light/dark themes are one attribute flip.
+
+:root {
+  --bg:            #f3f2f2;
+  --surface:       #eae9e9;
+  --text:          #201f1d;
+  --text-muted:    #7d7979;
+  --text-faint:    #9b9797;
+  --accent:        #b68235;
+  --accent-strong: #7d5411;   // accent at paragraph size (contrast-safe on light)
+  --accent-mid:    #a06f24;
+  --rule:          color-mix(in srgb, var(--text) 8%, transparent);
+  --rule-strong:   color-mix(in srgb, var(--text) 14%, transparent);
+  --code-line:     color-mix(in srgb, var(--text) 12%, transparent);
+  --placeholder-a: #eae7e7;
+  --placeholder-b: #d7d3d3;
+}
+
+html[data-theme="dark"] {
+  --bg:            #1b1a18;
+  --surface:       #232120;
+  --text:          #eae6e0;
+  --text-muted:    #a09a93;
+  --text-faint:    #8c857f;
+  --accent:        #c9974a;
+  --accent-strong: #e8bc80;
+  --accent-mid:    #e1ad66;
+  --placeholder-a: #2e2b29;
+  --placeholder-b: #3d3934;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --bg:            #1b1a18;
+    --surface:       #232120;
+    --text:          #eae6e0;
+    --text-muted:    #a09a93;
+    --text-faint:    #8c857f;
+    --accent:        #c9974a;
+    --accent-strong: #e8bc80;
+    --accent-mid:    #e1ad66;
+    --placeholder-a: #2e2b29;
+    --placeholder-b: #3d3934;
+  }
+}
+
 // Typography
 $font-display: "Cormorant Garamond", "Iowan Old Style", Palatino, Georgia, serif;
-$font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-$font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-
-// Colors
-$color-bg: #f7f5f0;
-$color-text: #2a2a28;
-$color-text-muted: #8a867e;
-$color-accent: #8b6d47;
-$color-accent-light: #b8a68e;
-$color-border: #ddd9d0;
-$color-code-bg: #efece5;
-$color-selection: #e8dfd2;
+$font-body:    "Lora", "Iowan Old Style", Palatino, Georgia, serif;
+$font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
 // Layout
-$content-width: 640px;
-$base-font-size: 19px;
-$base-line-height: 1.75;
-$spacing: 2rem;
+$measure:           28rem;   // reading measure — deliberately narrow, leaves room for margin notes
+$page-width:        38rem;
+$base-font-size:    17px;
+$base-line-height:  1.8;
