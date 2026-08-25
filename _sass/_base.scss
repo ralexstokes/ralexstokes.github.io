@@ -47,7 +47,7 @@ a {
 em { font-style: italic; }
 strong { font-weight: 500; }
 
-// Blockquote — no rule, no fill; it changes voice by setting in the display face
+// Blockquote - no rule, no fill; it changes voice by setting in the display face
 blockquote {
   margin: 2rem 0;
   padding: 0;
@@ -67,7 +67,7 @@ hr {
   margin: 3rem 0;
 }
 
-// Images — figures, captioned, unmatted
+// Images - figures, captioned, unmatted
 img { max-width: 100%; height: auto; display: block; border-radius: 2px; }
 
 figure { margin: 0 0 2rem; }
@@ -80,7 +80,7 @@ figcaption {
   text-align: left;
 }
 
-// Code — a single hairline in the margin instead of a filled panel
+// Code - a single hairline in the margin instead of a filled panel
 code {
   font-family: $font-mono;
   font-size: 0.8rem;
@@ -105,7 +105,7 @@ pre {
 ul, ol { padding-left: 1.4rem; margin: 0 0 1.3rem; }
 li { margin-bottom: 0.35rem; }
 
-// Tables — hairlines between rows only, header set as a kicker
+// Tables - hairlines between rows only, header set as a kicker
 table {
   width: 100%;
   border-collapse: collapse;
@@ -133,7 +133,7 @@ td {
 
 th:last-child, td:last-child { padding-right: 0; }
 
-// Display math / centred formulae: <div class="formula">…</div>
+// Display math / centred formulae: <div class="formula">...</div>
 .formula {
   margin: 1.8rem 0;
   text-align: center;

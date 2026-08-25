@@ -1,4 +1,4 @@
-// Rouge highlighting — accent and neutrals only, no rainbow
+// Rouge highlighting - accent and neutrals only, no rainbow
 .highlight {
   .c, .c1, .cm, .cs { color: var(--text-faint); font-style: italic; }  // comments
   .k, .kd, .kn, .kp, .kr, .kt { color: var(--accent-strong); }         // keywords

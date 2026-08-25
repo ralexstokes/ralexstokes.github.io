@@ -60,7 +60,7 @@
   }
 }
 
-// Post list — titles only; date and rule appear on hover
+// Post list - titles only; date and rule appear on hover
 
 .post-list {
   list-style: none;
@@ -138,7 +138,7 @@
   h2, h3 { text-align: left; }
 }
 
-// Table of contents — always fully visible
+// Table of contents - always fully visible
 .toc {
   margin: 0 0 2.75rem;
   display: flex;
@@ -165,7 +165,7 @@
   a { color: var(--text-muted); }
 }
 
-// Margin notes: <span class="sidenote">…</span> inside <p class="has-sidenote">
+// Margin notes: <span class="sidenote">...</span> inside <p class="has-sidenote">
 .has-sidenote { position: relative; }
 
 .sidenote {
@@ -232,7 +232,7 @@ sup a, .footnote { color: var(--accent-mid); }
   }
 }
 
-// Responsive — sidenotes fold into the flow
+// Responsive - sidenotes fold into the flow
 
 @media (max-width: 900px) {
   .sidenote {

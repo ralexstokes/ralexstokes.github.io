@@ -1,4 +1,4 @@
-// anaphors — design tokens
+// anaphors - design tokens
 // Colors live as CSS custom properties so the light/dark themes are one attribute flip.
 
 :root {
@@ -51,7 +51,7 @@ $font-body:    "Lora", "Iowan Old Style", Palatino, Georgia, serif;
 $font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
 // Layout
-$measure:           28rem;   // reading measure — deliberately narrow, leaves room for margin notes
+$measure:           28rem;   // reading measure - deliberately narrow, leaves room for margin notes
 $page-width:        38rem;
 $base-font-size:    17px;
 $base-line-height:  1.8;
