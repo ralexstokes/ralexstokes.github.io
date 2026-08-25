@@ -1,6 +1,68 @@
 // anaphors - design tokens
 // Colors live as CSS custom properties so the light/dark themes are one attribute flip.
 
+// Register the palette so browsers can interpolate every theme-dependent color
+// together instead of repainting different parts of the page at different times.
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f3f2f2;
+}
+
+@property --surface {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #eae9e9;
+}
+
+@property --text {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #201f1d;
+}
+
+@property --text-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #7d7979;
+}
+
+@property --text-faint {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #9b9797;
+}
+
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #b68235;
+}
+
+@property --accent-strong {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #7d5411;
+}
+
+@property --accent-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #a06f24;
+}
+
+@property --placeholder-a {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #eae7e7;
+}
+
+@property --placeholder-b {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #d7d3d3;
+}
+
 :root {
   --bg:            #f3f2f2;
   --surface:       #eae9e9;
@@ -15,6 +77,17 @@
   --code-line:     color-mix(in srgb, var(--text) 12%, transparent);
   --placeholder-a: #eae7e7;
   --placeholder-b: #d7d3d3;
+  transition:
+    --bg 0.22s ease,
+    --surface 0.22s ease,
+    --text 0.22s ease,
+    --text-muted 0.22s ease,
+    --text-faint 0.22s ease,
+    --accent 0.22s ease,
+    --accent-strong 0.22s ease,
+    --accent-mid 0.22s ease,
+    --placeholder-a 0.22s ease,
+    --placeholder-b 0.22s ease;
 }
 
 html[data-theme="dark"] {
@@ -43,6 +116,10 @@ html[data-theme="dark"] {
     --placeholder-a: #2e2b29;
     --placeholder-b: #3d3934;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { transition: none; }
 }
 
 // Typography
