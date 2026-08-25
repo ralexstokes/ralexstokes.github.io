@@ -1,5 +1,9 @@
 title: anaphors
 url: https://stokes.io
+jekyll_compose:
+  default_front_matter:
+    posts:
+      layout: post
 exclude:
   - .bundle
   - Gemfile

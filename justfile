@@ -9,3 +9,7 @@ run:
 
 build:
     bundle exec jekyll build
+
+# Create a new post dated today
+post title:
+    bundle exec jekyll post "{{title}}"
