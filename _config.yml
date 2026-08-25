@@ -1,5 +1,6 @@
 title: anaphors
 url: https://stokes.io
+permalink: /:year/:month/:day/:title
 jekyll_compose:
   default_front_matter:
     posts:
