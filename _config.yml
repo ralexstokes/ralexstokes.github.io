@@ -1,9 +1,5 @@
 title: anaphors
 url: https://stokes.io
-repository: ralexstokes/ralexstokes.github.io
-theme: minima
-plugins:
-  - jekyll-feed
 exclude:
   - .bundle
   - Gemfile

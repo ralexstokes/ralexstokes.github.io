@@ -1,6 +1,6 @@
-# GitHub Pages Blog
+# Jekyll Blog
 
-This repository uses the default GitHub Pages blog stack: Jekyll via the `github-pages` gem.
+This repository contains a Jekyll blog deployed with Cloudflare Pages. The Ruby version in `.ruby-version` is shared by Cloudflare Pages and the Nix development shell.
 
 ## Local development with Nix
 
@@ -24,6 +24,11 @@ This repository uses the default GitHub Pages blog stack: Jekyll via the `github
 
 4. Open <http://127.0.0.1:4000>.
 
-## Deploy on GitHub Pages
+## Deploy on Cloudflare Pages
 
-For a user/organization site (`<username>.github.io`), push to `main` and enable Pages to deploy from the branch.
+Cloudflare Pages deploys the `main` branch with these settings:
+
+- Build command: `bundle exec jekyll build`
+- Build output directory: `_site`
+
+Cloudflare installs the dependencies from `Gemfile.lock` and selects the Ruby version from `.ruby-version`.

@@ -1,11 +1,12 @@
 # AGENTS.md
 
 ## Purpose
-This repository is a GitHub Pages blog powered by Jekyll.
+This repository is a Jekyll blog deployed with Cloudflare Pages.
 
 ## Stack
-- Jekyll via the `github-pages` gem (`Gemfile`)
+- Jekyll and its plugins via Bundler (`Gemfile`)
 - Site config in `_config.yml`
+- Ruby version shared by Cloudflare Pages and Nix in `.ruby-version`
 - Nix development shell in `flake.nix`
 
 ## Local workflow
@@ -37,4 +38,5 @@ This repository is a GitHub Pages blog powered by Jekyll.
 
 ## Deployment
 - Push to `main` on `ralexstokes/ralexstokes.github.io`.
-- GitHub Pages serves the site from the default branch for this user site repo.
+- Cloudflare Pages builds with `bundle exec jekyll build`.
+- Cloudflare Pages publishes the generated `_site/` directory.
