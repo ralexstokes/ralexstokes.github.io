@@ -1,4 +1,6 @@
-# Helpers for local workflow commands from AGENTS.md.
+default:
+    @just --list
+
 install:
     bundle install
 
