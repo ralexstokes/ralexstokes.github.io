@@ -5,3 +5,4 @@
 /.jekyll-cache/
 /.jekyll-metadata
 .claude
+.direnv
