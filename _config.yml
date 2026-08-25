@@ -2,6 +2,7 @@ title: anaphors
 description: some thoughts
 url: https://stokes.io
 repository: ralexstokes/ralexstokes.github.io
+permalink: /:year/:month/:day/:title/
 theme: minima
 plugins:
   - jekyll-feed
